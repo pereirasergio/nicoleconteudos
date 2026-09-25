@@ -87,7 +87,14 @@
       hora: "18h00",
       kind: "copy",
       title: "Carrossel de apresentação — “Prazer, Nicole Kenttä”",
-      body: '<h4>Legenda</h4><p>Prazer, Nicole Kenttä.<br>A beleza entrou na minha vida ainda na adolescência. Hoje, poder cuidar de cada cliente aqui em Braga é uma parte muito especial da minha história. 🤎</p><p>Se você chegou agora, seja bem-vinda! Me conta: conheceu o meu trabalho pelas sobrancelhas ou pelas pestanas?</p>'
+      body: '<h4>Slide 1</h4><p>Prazer, Nicole Kenttä.</p>' +
+        '<h4>Slide 2</h4><p>Meu interesse pela beleza começou quando eu ainda era adolescente.</p><p>Eu adorava ver vídeos de maquilhagem, e minha mãe até me deu os meus primeiros cursos de sobrancelhas. Mas, naquela época, os estudos acabaram por levar a minha atenção para outro caminho.</p>' +
+        '<h4>Slide 3</h4><p>Depois que me mudei para Portugal, comecei a trabalhar numa empresa de sobrancelhas. E sabe aquele sonho que tinha ficado lá atrás? Voltou com tudo.</p><p>Foi aí que decidi estudar mais, ganhar experiência e, algum tempo depois, começar a trabalhar por conta própria.</p>' +
+        '<h4>Slide 4</h4><p>Hoje, uma das partes de que mais gosto no meu trabalho é conhecer quem está à minha frente.</p><p>Quero saber do que você gosta, do que tem receio e de como gostaria de se ver. Porque um resultado bonito também precisa fazer sentido para você.</p>' +
+        '<h4>Slide 5</h4><p>Por aqui, cuido principalmente de sobrancelhas e pestanas.</p><p>Seja para dar mais atenção ao desenho das sobrancelhas ou para encontrar um efeito de pestanas que combine com você, meu cuidado está nos detalhes de cada atendimento.</p>' +
+        '<h4>Slide 6</h4><p>Também trabalho com henna e tintura, brow lamination, lash lifting, micropigmentação, hidragloss e epilação facial com linha.</p><p>Se você não sabe qual procedimento escolher, pode me contar o que procura. Eu ajudo a entender as opções.</p>' +
+        '<h4>Slide 7</h4><p>Agora que já contei um pouco sobre mim, quero conhecer você também!</p><p>Se você é de Braga e região, me chama no WhatsApp. Vamos conversar e encontrar um atendimento que combine com você.</p>' +
+        '<h4>Legenda (texto do post)</h4><p>Prazer, Nicole Kenttä.<br>A beleza entrou na minha vida ainda na adolescência. Hoje, poder cuidar de cada cliente aqui em Braga é uma parte muito especial da minha história. 🤎</p><p>Se você chegou agora, seja bem-vinda! Me conta: conheceu o meu trabalho pelas sobrancelhas ou pelas pestanas?</p>'
     },
     {
       id: "2026-10-08-foto",
@@ -146,7 +153,10 @@
       date: "Seg, 19 de out",
       kind: "foto",
       title: "Carrossel de feedbacks das clientes",
-      body: '<h4>Legenda</h4><p>Feedbacks: Não sou eu quem estou dizendo, são elas →<br>Arrasta para o lado para conferir feedbacks de quem confia! ✨</p><p>Se você é de Braga e também quer cuidar das suas sobrancelhas ou pestanas, clica no link da bio e faça a tua marcação.</p>',
+      body: '<h4>Slide 1</h4><p>Feedbacks: Não sou eu quem estou dizendo, são elas →</p>' +
+        '<h4>Slide 2 (fotos a enviar)</h4><p>Foto de procedimento de fundo</p><p>Print de feebacks das clientes (envie pelo menos 5 por favor)</p>' +
+        '<h4>Slide 3</h4><p>Se elas confiam, você também pode confiar.</p><p>Clica no link da bio e faça sua marcação!</p>' +
+        '<h4>Legenda (texto do post)</h4><p>Arrasta para o lado para conferir feedbacks de quem confia! ✨</p><p>Se você é de Braga e também quer cuidar das suas sobrancelhas ou pestanas, clica no link da bio e faça a tua marcação.</p>',
       subitems: [
         { id: "s1", text: "Foto de procedimento de fundo" },
         { id: "s2", text: "Prints de feedbacks das clientes (pelo menos 5)" }
@@ -173,8 +183,7 @@
         '<p><strong>Cena 3</strong> — A alergia é um risco, sim. Nenhuma profissional pode prometer risco zero. Se você já teve alguma reação, é importante me comunicar antes de marcar.</p>' +
         '<p><strong>Cena 4</strong> — A ideia da extensão não é prejudicar as suas pestanas naturais. Mas uma aplicação inadequada pode afetar os fios. Por isso, eu avalio as suas pestanas, faço a aplicação com cuidado e explico como cuidar delas depois. → Mostrar avaliação e takes próximos da aplicação.</p>' +
         '<p><strong>Cena 5</strong> — O tempo de durabilidade varia de pessoa para pessoa. E, se você quiser manter o efeito, os cuidados diários e a manutenção precisam fazer parte da sua rotina.</p>' +
-        '<p><strong>Fecho:</strong> Se você é de Braga, me chama no WhatsApp, vamos encontrar o efeito de pestanas que mais combina com você.</p>',
-      ref: "https://aprovapost.com.br/13527/cliente/nicole-kentta/"
+        '<p><strong>Fecho:</strong> Se você é de Braga, me chama no WhatsApp, vamos encontrar o efeito de pestanas que mais combina com você.</p>'
     },
     {
       id: "2026-10-23-video",
@@ -190,7 +199,14 @@
       date: "Seg, 26 de out",
       kind: "foto",
       title: "Carrossel — “O que te incomoda no seu olhar tem solução”",
-      body: '<h4>Legenda</h4><p>O que te incomoda no seu olhar tem solução<br>Descubra qual destes cuidados combina com o que você procura.</p><p>Às vezes você sabe o que gostaria de mudar no seu olhar, mas não sabe qual procedimento escolher. E tudo bem! 🤎</p><p>Se você é de Braga, me chama no WhatsApp e conta o que procura. Vamos conversar sobre o cuidado que faz sentido para você. ✨</p>',
+      body: '<h4>Slide 1</h4><p>O que te incomoda no seu olhar tem solução</p><p>Descubra qual destes cuidados combina com o que você procura.</p>' +
+        '<h4>Slide 2</h4><p><strong>O incômodo:</strong> “Queria as minhas pestanas mais destacadas, mas não tenho paciência para passar máscara todos os dias.”</p><p><strong>A solução:</strong> EXTENSÃO DE PESTANAS</p><p><strong>Imagem:</strong> cum resultado real, mostrando bem o efeito escolhido pela cliente.</p>' +
+        '<h4>Slide 3</h4><p><strong>O incômodo:</strong> “Penteio as sobrancelhas, saio de casa e parece que os fios já estão todos fora do lugar.”</p><p><strong>A solução:</strong> BROW LAMINATION</p><p><strong>Imagem:</strong> resultado real em que a posição dos fios esteja visível.</p>' +
+        '<h4>Slide 4</h4><p><strong>O incômodo:</strong> “Até tiro uns pelinhos em casa, mas nunca consigo deixar as sobrancelhas do jeito que gostaria.”</p><p><strong>A solução:</strong> DESIGN DE SOBRANCELHAS</p><p><strong>Imagem:</strong> antes e depois autorizado ou foto do resultado final.</p>' +
+        '<h4>Slide 5</h4><p><strong>O incômodo:</strong> “Gosto das minhas pestanas naturais, mas queria vê-las mais curvadas e destacadas.”</p><p><strong>A solução:</strong> LASH LIFTING</p><p><strong>Imagem:</strong> close do resultado, de preferência com antes e depois autorizado.</p>' +
+        '<h4>Slide 6</h4><p><strong>O incômodo:</strong> “Queria acordar com as sobrancelhas mais definidas, sem precisar preenchê-las todos os dias.”</p><p><strong>A solução:</strong> MICROPIGMENTAÇÃO DE SOBRANCELHAS <em>(sem foto pedida para este slide)</em></p>' +
+        '<h4>Slide 7</h4><p>O seu olhar não precisa ser igual ao de ninguém para ser bonito.</p><p>O cuidado certo começa por entender o que você gostaria de valorizar.</p><p>Me chama no WhatsApp e conta qual destes incômodos falou mais com você. Vamos conversar sobre a melhor opção para valorizar o seu olhar.</p>' +
+        '<h4>Legenda (texto do post)</h4><p>Às vezes você sabe o que gostaria de mudar no seu olhar, mas não sabe qual procedimento escolher. E tudo bem! 🤎</p><p>Se você é de Braga, me chama no WhatsApp e conta o que procura. Vamos conversar sobre o cuidado que faz sentido para você. ✨</p>',
       subitems: [
         { id: "s1", text: "Foto — extensão de pestanas: resultado real, mostrando bem o efeito escolhido pela cliente" },
         { id: "s2", text: "Foto — brow lamination: resultado real em que a posição dos fios esteja visível" },
@@ -226,7 +242,13 @@
       date: "Sex, 30 de out",
       kind: "foto",
       title: "Carrossel — “Quero ser sua profissional preferida”",
-      body: '<h4>Legenda</h4><p>Quero ser sua profissional preferida de sobrancelhas e pestanas.<br>Então...</p><p>Minha missão é valorizar o seu olhar e te deixar ainda mais linda!</p><p>Se você é de Braga, me chama no WhatsApp pelo link da bio. Vou adorar cuidar de você! ✨</p>',
+      body: '<h4>Slide 1</h4><p>Quero ser sua profissional preferida de sobrancelhas e pestanas.</p><p>Então...</p>' +
+        '<h4>Slide 2</h4><p>Antes de escolher qualquer procedimento, quero que você me conte como gosta do seu olhar. Vou te indicar o que mais combina com você</p><p><strong>Imagem:</strong> Nicole atendendo</p>' +
+        '<h4>Slide 3</h4><p>Aqui, suas sobrancelhas não precisam seguir um molde.</p><p>O design é pensado para valorizar os seus traços e chegar a um resultado que você goste de ver no espelho.</p><p><strong>Imagem:</strong> Resultado real do processo, o desenho do design.</p>' +
+        '<h4>Slide 4</h4><p>Nas pestanas, tem quem ame um efeito delicado e quem prefira mais destaque. Quero entender o que você procura antes de escolhermos o resultado.</p><p><strong>Imagem:</strong> aplicação ou resultado de extensão de pestanas.</p>' +
+        '<h4>Slide 5</h4><p>Esse momento é seu.</p><p>Se quiser conversar durante o atendimento, ouvir uma música ou se preferir fechar os olhos e relaxar um pouquinho, fica à vontade também.</p><p><strong>Imagem:</strong> detalhes do espaço ou da Nicole a atender.</p>' +
+        '<h4>Slide 6</h4><p>O meu desejo é que você se olhe no espelho e ame o que vê!</p><p>Se você é de Braga, me chama pelo WhatsApp no link da bio.</p>' +
+        '<h4>Legenda (texto do post)</h4><p>Quero ser sua profissional preferida de sobrancelhas e pestanas.<br>Então...</p><p>Minha missão é valorizar o seu olhar e te deixar ainda mais linda!</p><p>Se você é de Braga, me chama no WhatsApp pelo link da bio. Vou adorar cuidar de você! ✨</p>',
       subitems: [
         { id: "s1", text: "Foto — Nicole atendendo" },
         { id: "s2", text: "Foto — resultado real do processo / desenho do design" },
