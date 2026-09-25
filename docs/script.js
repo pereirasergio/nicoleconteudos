@@ -23,13 +23,19 @@
       kind: "video",
       prazo: "03/10",
       title: "Extensão de pestanas, sobrancelhas e brow lamination",
-      body: '<h4>Formato</h4><p>Nicole começa falando para a câmera. Depois entram takes dos procedimentos e dos resultados, com a fala dela em off.</p><h4>Foco</h4><p>Extensão de pestanas, design de sobrancelhas e brow lamination.</p>',
+      body: '<h4>Formato</h4><p>Nicole começa falando para a câmera. Depois, entram takes dos procedimentos e dos resultados, com a fala dela em off.</p>' +
+        '<h4>Foco</h4><p>Extensão de pestanas, design de sobrancelhas e brow lamination.</p>' +
+        '<h4>Cena 1 — Nicole olhando para a câmera | Gancho</h4><p>Sabe quando você se olha no espelho, arruma as sobrancelhas, passa máscara nas pestanas… e ainda sente que falta alguma coisa no seu olhar?</p><p><strong>Texto na tela:</strong> “Sente que falta alguma coisa no seu olhar?”</p>' +
+        '<h4>Cena 2 — Nicole ainda na câmera</h4><p>Pois é, eu também já passei por isso. E às vezes, tudo o que queria era não precisar passar tanto tempo me arrumando todos os dias, sabe?</p>' +
+        '<h4>Cena 3 — Entram takes de Nicole fazendo extensão de pestanas</h4><p>Foi aí que descobri a extensão de pestanas e a brow lamination.</p><p>Se você quer dar mais destaque ao seu olhar e deixar a rotina mais prática, a extensão de pestanas pode ser o resultado que está procurando.</p><p>Mostrar aplicação e, em seguida, um resultado real.</p>' +
+        '<h4>Cena 4 — Takes de design de sobrancelhas e brow lamination</h4><p>Nas sobrancelhas, o design por si só, já ajuda a valorizar o formato. Mas, se você gosta dos fios mais alinhados, e aquela sensação de sobrancelha mais preenchida, você vai se apaixonar pela brow lamination.</p>' +
+        '<h4>Cena 5 — Montagem com os resultados e Nicole volta à câmera</h4><p>E é incrível como cuidar desses detalhes pode mudar a forma como você se vê no espelho. Se você é de Braga, me chama no WhatsApp, quero te ajudar a escolher o que mais combina com o seu olhar.</p>',
       subitems: [
-        { id: "s1", text: "Cena 1 — gancho olhando pra câmera: “sente que falta alguma coisa no seu olhar?”" },
-        { id: "s2", text: "Cena 2 — segue na câmera, contando a própria experiência" },
-        { id: "s3", text: "Cena 3 — takes da extensão de pestanas: aplicação + resultado real" },
-        { id: "s4", text: "Cena 4 — takes do design de sobrancelhas e da brow lamination" },
-        { id: "s5", text: "Cena 5 — montagem dos resultados + Nicole volta à câmera com CTA (WhatsApp, Braga)" }
+        { id: "s1", text: "Cena 1 — Nicole olhando para a câmera | Gancho" },
+        { id: "s2", text: "Cena 2 — Nicole ainda na câmera" },
+        { id: "s3", text: "Cena 3 — takes de Nicole fazendo extensão de pestanas" },
+        { id: "s4", text: "Cena 4 — takes de design de sobrancelhas e brow lamination" },
+        { id: "s5", text: "Cena 5 — montagem com os resultados e Nicole volta à câmera" }
       ]
     },
     {
@@ -38,13 +44,32 @@
       kind: "video",
       prazo: "03/10",
       title: "Dia real de atendimentos (bastidores)",
-      body: '<h4>Formato</h4><p>Sem falar pra câmera nem decorar roteiro — a narração é montada depois em cima das imagens. Vídeos na vertical, takes curtos, som não é prioridade.</p>',
+      body: '<h4>Orientações</h4><p>A ideia é acompanhar um dia real de atendimentos. Não precisa falar para a câmera nem decorar um roteiro: depois que tivermos as imagens, vamos montar a narração com base no que aconteceu nesse dia.</p><p>Grave os vídeos na vertical, em takes curtos. Não se preocupe com o som, porque a maior parte do Reels será narrada.</p>' +
+        '<h4>1. Abertura do vídeo</h4><p>Para termos opções de gancho, grave alguns takes seus em diferentes atendimentos. Você pode escolher o que for mais confortável:</p><ul>' +
+        '<li>Fazer uma selfie rápida, olhando para a câmera e dando um tchauzinho ou chamando a pessoa para acompanhar o dia; ou</li>' +
+        '<li>Gravar apenas imagens suas trabalhando, sem falar nada.</li>' +
+        '</ul>' +
+        '<h4>2. Em cada atendimento</h4><p>Se possível, registre um pouco de todos os atendimentos do dia, principalmente o procedimento e o resultado. Não precisa repetir a chegada de todas as clientes.</p><p>Algumas cenas que podem ser gravadas:</p><ul>' +
+        '<li>Você cumprimentando uma cliente — uma vez no dia já basta.</li>' +
+        '<li>A cliente deitando na maca.</li>' +
+        '<li>Você separarando materiais e a preparar o espaço.</li>' +
+        '<li>Detalhes das suas mãos durante o procedimento.</li>' +
+        '<li>Um ângulo de cima, outro de lado e um um pouco mais aberto, em que você também apareça trabalhando</li>' +
+        '<li>O resultado final, com closes das sobrancelhas ou pestanas.</li>' +
+        '</ul><p>Tente variar os ângulos quando for possível, sem interromper o atendimento ou dificultar o seu trabalho. Essa variedade vai deixar o vídeo mais dinâmico.</p>' +
+        '<h4>3. Resultado e reação da cliente</h4><p>Ao terminar, grave o resultado de cada procedimento. Se a cliente for olhar-se no espelho, tente captar esse momento e a reação espontânea dela.</p><p>Se ela disser algo que possa virar um depoimento, mantenha o áudio original dessa gravação. Antes de usar a imagem ou a fala no Instagram, confirme com ela se autoriza a publicação. O mesmo vale para qualquer take em que a cliente possa ser identificada.</p>' +
+        '<h4>4. O que acontece entre uma cliente e outra</h4><p>Os pequenos momentos também fazem parte do vídeo. Se acontecerem naturalmente, grave.</p><ul>' +
+        '<li>A higienização da maca e a organização dos materiais para a próxima cliente.</li>' +
+        '<li>Detalhes do estúdio.</li>' +
+        '<li>Uma pausa para comer ou tomar alguma coisa.</li>' +
+        '</ul>' +
+        '<h4>5. Fechamento</h4><p>Se lembrar, grave um take rápido no fim do expediente: você organizando o espaço, apagar as luzes ou dar um tchau para a câmera.</p><p>Com os vídeos em mãos, montaremos o roteiro e a narração de acordo com os atendimentos e os momentos que realmente aconteceram.</p>',
       subitems: [
-        { id: "s1", text: "Abertura: selfie rápida com tchauzinho OU só imagens trabalhando, sem falar nada" },
-        { id: "s2", text: "Em cada atendimento: procedimento + resultado, variando ângulos (de cima, de lado, mais aberto)" },
-        { id: "s3", text: "Reação da cliente ao resultado — se puder virar depoimento, manter o áudio (confirmar autorização antes de publicar)" },
-        { id: "s4", text: "Bastidores entre clientes: higienizar a maca, organizar materiais, detalhes do estúdio, uma pausa" },
-        { id: "s5", text: "Fechamento no fim do expediente: organizando o espaço, apagando as luzes ou um tchau pra câmera" }
+        { id: "s1", text: "1. Abertura do vídeo — takes de gancho (selfie/tchauzinho ou só trabalhando)" },
+        { id: "s2", text: "2. Em cada atendimento — procedimento e resultado, ângulos variados" },
+        { id: "s3", text: "3. Resultado e reação da cliente (confirmar autorização antes de publicar)" },
+        { id: "s4", text: "4. O que acontece entre uma cliente e outra — bastidores" },
+        { id: "s5", text: "5. Fechamento no fim do expediente" }
       ],
       ref: "https://www.instagram.com/reel/DZvYAFxNtyo/?stkn=eHRkcjU4Nzg5NTN0"
     },
@@ -54,15 +79,23 @@
       kind: "video",
       prazo: "03/10",
       title: "Vídeo em tópicos, estilo orgânico (selfie)",
-      body: '<h4>Formato</h4><p>Modo selfie, falando em tópicos — bem parecido com a referência. Vídeo único e contínuo (não precisa gravar em partes separadas).</p><h4>Foco</h4><p>Tema: “coisas que eu não acho normal sendo especialista em pestanas e sobrancelhas”.</p>' +
-        '<h4>Roteiro</h4><ul>' +
+      body: '<h4>Orientações</h4><p>A ideia desse vídeo é ser mais orgânico, então pode até gravar no modo selfie, falando em tópicos, bem parecido com a referência.</p>' +
+        '<p>Coisas que eu não acho normal sendo uma especialista em pestanas e sobrancelhas</p><ul>' +
         '<li>Achar que toda extensão de pestanas fica artificial</li>' +
-        '<li>Achar que tirar uns pelinhos da sobrancelha em casa é igual a fazer num studio</li>' +
-        '<li>Não estar satisfeita com o olhar e achar que não tem o que fazer</li>' +
-        '<li>Ter medo de brow lamination por causa de uma sobrancelha arrepiada que viu na internet</li>' +
-        '<li>Fazer as pestanas e esquecer da manutenção</li>' +
-        '<li>Não se cuidar por “falta de tempo”</li>' +
+        '<li>Achar que tirar uns pelinhos da sobrancelha em casa vai ser a mesma coisa que fazer num studio especializado</li>' +
+        '<li>Não estar satisfeita com o seu olhar e achar que não tem o que fazer</li>' +
+        '<li>Ter medo de brow lamination só porque viu uma sobrancelha arrepiada na internet</li>' +
+        '<li>Fazer as pestanas e esquecer completamente da manutenção.</li>' +
+        '<li>Não se cuidar por "falta de tempo"</li>' +
         '</ul>',
+      subitems: [
+        { id: "s1", text: "Achar que toda extensão de pestanas fica artificial" },
+        { id: "s2", text: "Achar que tirar uns pelinhos da sobrancelha em casa vai ser a mesma coisa que fazer num studio especializado" },
+        { id: "s3", text: "Não estar satisfeita com o seu olhar e achar que não tem o que fazer" },
+        { id: "s4", text: "Ter medo de brow lamination só porque viu uma sobrancelha arrepiada na internet" },
+        { id: "s5", text: "Fazer as pestanas e esquecer completamente da manutenção" },
+        { id: "s6", text: "Não se cuidar por \"falta de tempo\"" }
+      ],
       ref: "https://www.instagram.com/reel/DcPP2u8P0VL/?stkn=dmM0eHVtdzFhaXZw"
     },
     {
