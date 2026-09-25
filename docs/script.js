@@ -23,8 +23,8 @@
       kind: "video",
       prazo: "03/10",
       title: "Extensão de pestanas, sobrancelhas e brow lamination",
-      body: '<h4>Formato</h4><p>Nicole começa falando para a câmera. Depois, entram takes dos procedimentos e dos resultados, com a fala dela em off.</p>' +
-        '<h4>Foco</h4><p>Extensão de pestanas, design de sobrancelhas e brow lamination.</p>' +
+      body: '<h4>Orientações</h4><p><strong>Formato:</strong> Nicole começa falando para a câmera. Depois, entram takes dos procedimentos e dos resultados, com a fala dela em off.</p>' +
+        '<p><strong>Foco:</strong> extensão de pestanas, design de sobrancelhas e brow lamination.</p><h4>Roteiro</h4>' +
         '<h4>Cena 1 — Nicole olhando para a câmera | Gancho</h4><p>Sabe quando você se olha no espelho, arruma as sobrancelhas, passa máscara nas pestanas… e ainda sente que falta alguma coisa no seu olhar?</p><p><strong>Texto na tela:</strong> “Sente que falta alguma coisa no seu olhar?”</p>' +
         '<h4>Cena 2 — Nicole ainda na câmera</h4><p>Pois é, eu também já passei por isso. E às vezes, tudo o que queria era não precisar passar tanto tempo me arrumando todos os dias, sabe?</p>' +
         '<h4>Cena 3 — Entram takes de Nicole fazendo extensão de pestanas</h4><p>Foi aí que descobri a extensão de pestanas e a brow lamination.</p><p>Se você quer dar mais destaque ao seu olhar e deixar a rotina mais prática, a extensão de pestanas pode ser o resultado que está procurando.</p><p>Mostrar aplicação e, em seguida, um resultado real.</p>' +
@@ -79,8 +79,8 @@
       kind: "video",
       prazo: "03/10",
       title: "Vídeo em tópicos, estilo orgânico (selfie)",
-      body: '<h4>Orientações</h4><p>A ideia desse vídeo é ser mais orgânico, então pode até gravar no modo selfie, falando em tópicos, bem parecido com a referência.</p>' +
-        '<p>Coisas que eu não acho normal sendo uma especialista em pestanas e sobrancelhas</p><ul>' +
+      body: '<h4>Orientações</h4><p>-> A ideia desse vídeo é ser mais orgânico, então pode até gravar no modo selfie, falando em tópicos, bem parecido com a referência.</p>' +
+        '<p>----</p><p>-> Coisas que eu não acho normal sendo uma especialista em pestanas e sobrancelhas</p><ul>' +
         '<li>Achar que toda extensão de pestanas fica artificial</li>' +
         '<li>Achar que tirar uns pelinhos da sobrancelha em casa vai ser a mesma coisa que fazer num studio especializado</li>' +
         '<li>Não estar satisfeita com o seu olhar e achar que não tem o que fazer</li>' +
@@ -103,15 +103,22 @@
       date: "Sáb, 03 de out",
       kind: "copy",
       title: "Stories Semana 1 (05 a 11 de out)",
-      body: '<h4>Sobre</h4><p>Roteiro de stories da semana — um tema por dia (sem prazo de entrega, é conteúdo do dia a dia). O detalhe de cada dia está nos checkboxes abaixo.</p>',
+      body: '<p><strong>STORIES SEMANA 1</strong><br>05 A 11 DE OUT</p>' +
+        '<h4>Segunda | conexão</h4><p><strong>FOCO:</strong> Começar uma conversa com quem acompanha</p><p><strong>Sequência sugerida:</strong> Nicole aparece, mostra um pedacinho da rotina e pergunta: “O que você mais gosta no seu olhar: pestanas ou sobrancelhas?” Pode usar enquete para puxar as respostas.</p>' +
+        '<h4>Terça | educação</h4><p><strong>Foco:</strong> Ajudar a cliente a entender os serviços</p><p><strong>Sequência sugerida:</strong> Escolher uma dúvida por vez.<br>Ex.: “Extensão de pestanas precisa ficar marcada?” Mostrar dois resultados diferentes e explicar, em poucas palavras, como a escolha do efeito muda o visual.</p>' +
+        '<h4>Quarta | carreira e autoridade</h4><p><strong>FOCO:</strong> Mostrar a profissional por trás dos atendimentos</p><p><strong>Sequência sugerida:</strong> Contar uma história curta da trajetória em Portugal, mostrar algo que aprendeu na profissão ou explicar uma escolha técnica que faz no atendimento. Aqui cabe falar também com futuras alunas, sem precisar anunciar cursos antes da hora.</p>' +
+        '<h4>QUINTA | quebra de objeção</h4><p><strong>FOCO:</strong> Dar segurança para quem quer marcar</p><p><strong>Sequência sugerida:</strong> Pegar um receio real: medo de ficar artificial, dúvidas sobre manutenção ou sobre como escolher o procedimento. Nicole responde olhando para a câmera e mostra um exemplo do próprio trabalho.</p>' +
+        '<h4>Sexta | dia de atendimentos</h4><p><strong>FOCO:</strong> Mostrar a experiência acontecendo</p><p><strong>Sequência sugerida:</strong> Chegada ao estúdio, preparação, trechos de um procedimento, resultado final e, quando houver autorização, reação ou comentário da cliente. Vale gravar ao longo do dia e publicar só os melhores momentos.</p>' +
+        '<h4>Sábado | resultados e convite</h4><p><strong>FOCO:</strong> Transformar interesse em marcação</p><p><strong>Sequência sugerida:</strong> Mostrar um resultado de pestanas ou sobrancelhas, contar brevemente o que a cliente procurava e fechar com: “Quer encontrar um resultado que combine com você? Me chama no WhatsApp.”</p>' +
+        '<h4>Domingo | proximidade e agenda</h4><p><strong>FOCO:</strong> Manter a presença de forma leve</p><p><strong>Sequência sugerida:</strong> Um momento da vida real, uma reflexão curta sobre a semana ou os preparativos para a próxima. Se fizer sentido, terminar com os horários disponíveis. Se for dia de descanso, bastam um ou dois stories.</p>',
       subitems: [
-        { id: "s1", text: "Segunda | conexão — Foco: começar uma conversa com quem acompanha. Sequência: Nicole aparece, mostra um pedacinho da rotina e pergunta “O que você mais gosta no seu olhar: pestanas ou sobrancelhas?” (pode usar enquete)." },
-        { id: "s2", text: "Terça | educação — Foco: ajudar a cliente a entender os serviços. Sequência: escolher uma dúvida por vez (ex.: “Extensão de pestanas precisa ficar marcada?”), mostrar dois resultados diferentes." },
-        { id: "s3", text: "Quarta | carreira e autoridade — Foco: mostrar a profissional por trás dos atendimentos. Sequência: contar uma história curta da trajetória em Portugal ou uma escolha técnica do atendimento." },
-        { id: "s4", text: "Quinta | quebra de objeção — Foco: dar segurança para quem quer marcar. Sequência: pegar um receio real (medo de ficar artificial, manutenção etc.) e responder com um exemplo do próprio trabalho." },
-        { id: "s5", text: "Sexta | dia de atendimentos — Foco: mostrar a experiência acontecendo. Sequência: chegada ao estúdio, preparação, trechos de um procedimento, resultado final, reação da cliente (se autorizado)." },
-        { id: "s6", text: "Sábado | resultados e convite — Foco: transformar interesse em marcação. Sequência: mostrar um resultado, contar o que a cliente procurava e fechar com CTA para o WhatsApp." },
-        { id: "s7", text: "Domingo | proximidade e agenda — Foco: manter a presença de forma leve. Sequência: um momento da vida real, reflexão da semana ou horários disponíveis (1 ou 2 stories bastam)." }
+        { id: "s1", text: "Segunda | conexão" },
+        { id: "s2", text: "Terça | educação" },
+        { id: "s3", text: "Quarta | carreira e autoridade" },
+        { id: "s4", text: "Quinta | quebra de objeção" },
+        { id: "s5", text: "Sexta | dia de atendimentos" },
+        { id: "s6", text: "Sábado | resultados e convite" },
+        { id: "s7", text: "Domingo | proximidade e agenda" }
       ]
     },
     {
@@ -127,7 +134,7 @@
         '<h4>Slide 5</h4><p>Por aqui, cuido principalmente de sobrancelhas e pestanas.</p><p>Seja para dar mais atenção ao desenho das sobrancelhas ou para encontrar um efeito de pestanas que combine com você, meu cuidado está nos detalhes de cada atendimento.</p>' +
         '<h4>Slide 6</h4><p>Também trabalho com henna e tintura, brow lamination, lash lifting, micropigmentação, hidragloss e epilação facial com linha.</p><p>Se você não sabe qual procedimento escolher, pode me contar o que procura. Eu ajudo a entender as opções.</p>' +
         '<h4>Slide 7</h4><p>Agora que já contei um pouco sobre mim, quero conhecer você também!</p><p>Se você é de Braga e região, me chama no WhatsApp. Vamos conversar e encontrar um atendimento que combine com você.</p>' +
-        '<h4>Legenda (texto do post)</h4><p>Prazer, Nicole Kenttä.<br>A beleza entrou na minha vida ainda na adolescência. Hoje, poder cuidar de cada cliente aqui em Braga é uma parte muito especial da minha história. 🤎</p><p>Se você chegou agora, seja bem-vinda! Me conta: conheceu o meu trabalho pelas sobrancelhas ou pelas pestanas?</p>'
+        '<h4>Legenda (texto do post)</h4><p>A beleza entrou na minha vida ainda na adolescência. Hoje, poder cuidar de cada cliente aqui em Braga é uma parte muito especial da minha história. 🤎</p><p>Se você chegou agora, seja bem-vinda! Me conta: conheceu o meu trabalho pelas sobrancelhas ou pelas pestanas?</p>'
     },
     {
       id: "2026-10-08-foto",
@@ -152,11 +159,11 @@
       kind: "foto",
       prazo: "07/10",
       title: "Fotos do studio, do resultado e da artista",
-      body: '<h4>Orientações</h4><p>Três fotos, marcadas separadamente abaixo.</p>',
+      body: '<h4>Orientações</h4><ul><li>O lugar: Foto de um ambiente do studio</li><li>A arte: Foto de um resultado</li><li>A artista: Uma foto sua</li></ul>',
       subitems: [
-        { id: "s1", text: "O lugar — foto de um ambiente do studio" },
-        { id: "s2", text: "A arte — foto de um resultado" },
-        { id: "s3", text: "A artista — uma foto sua" }
+        { id: "s1", text: "O lugar: Foto de um ambiente do studio" },
+        { id: "s2", text: "A arte: Foto de um resultado" },
+        { id: "s3", text: "A artista: Uma foto sua" }
       ],
       ref: "https://aprovapost.com.br/uploads/roteiros/5394/6ab51ef4dd804_Captura%20de%20Tela%202026-09-24%20a%CC%80s%2010.00.00.png"
     },
@@ -165,7 +172,7 @@
       date: "Qui, 15 de out",
       kind: "foto",
       title: "Foto de resultado — sobrancelhas/pestanas",
-      body: '<h4>O que enviar</h4><p>Enviar material de Sobrancelhas ou pestanas.</p>'
+      body: '<h4>O que enviar</h4><p>Enviar material de Sobrancelhas ou pestanas,</p>'
     },
     {
       id: "2026-10-16-video",
@@ -173,13 +180,20 @@
       kind: "video",
       prazo: "09/10",
       title: "Vídeo perguntas e respostas — mitos da carreira",
-      body: '<h4>Formato</h4><p>Alguém atrás da câmera faz as perguntas (ou você narra as perguntas depois, mas lembre-se de deixar esse tempo gravando você também); Nicole responde olhando para a câmera.</p>' +
+      body: '<h4>Orientações</h4><p><strong>Formato:</strong> alguém atrás da câmera faz as perguntas(ou você narra as perguntas depois, mas lembre-se de deixar esse tempo da pergunta gravando você também); Nicole responde olhando para a câmera.</p>' +
         '<h4>Roteiro</h4>' +
         '<p><strong>1. Gancho</strong><br>Pessoa atrás da câmera: “O mercado da beleza está saturado?”<br>Nicole: “Mito. É um mercado concorrido, sim, mas que cresce constantemente. Por isso, aprender a técnica, praticar e cuidar bem de cada cliente faz diferença. Entrar na área é só o começo.”</p>' +
         '<p><strong>2. Início da carreira</strong><br>Pessoa atrás da câmera: “Preciso saber fazer todas as técnicas de pestanas antes de começar?”<br>Nicole: “Mito. Você precisa aprender bem os fundamentos da técnica com que vai trabalhar, praticar e entender o que está a fazer. Não precisa tentar aprender tudo de uma vez.”</p>' +
         '<p><strong>3. Personalização</strong><br>Pessoa atrás da câmera: “O mesmo efeito de pestanas fica bom em todas as clientes?”<br>Nicole: “Mito! Uma cliente quer algo discreto, outra gosta de mais destaque. Parte do nosso trabalho é ouvir o que ela procura e saber fazer escolhas para aquele atendimento.”</p>' +
         '<p><strong>4. Fecho</strong><br>Pessoa atrás da câmera: “Então dá para começar na área mesmo sem saber tudo?”<br>Nicole: “Verdade. Ninguém começa sabendo tudo. O importante é levar o aprendizado e a prática a sério.”</p>' +
-        '<p><strong>CTA</strong> (Nicole olha diretamente para a câmera): “Se você gosta do mundo da beleza e quer aprender mais sobre pestanas e sobrancelhas, me segue aqui.”</p>'
+        '<p><strong>CTA</strong> Nicole olha diretamente para a câmera:<br>Se você gosta do mundo da beleza e quer aprender mais sobre pestanas e sobrancelhas, me segue aqui.</p>',
+      subitems: [
+        { id: "s1", text: "1. Gancho" },
+        { id: "s2", text: "2. Início da carreira" },
+        { id: "s3", text: "3. Personalização" },
+        { id: "s4", text: "4. Fecho" },
+        { id: "s5", text: "CTA" }
+      ]
     },
     {
       id: "2026-10-19-feedbacks",
@@ -201,7 +215,19 @@
       kind: "video",
       prazo: "15/10",
       title: "Vídeo “A beleza vem de dentro”",
-      body: '<h4>Orientações</h4><p><strong>Gancho:</strong> Nicole “chamando” com a mão, entrando no seu ambiente de trabalho.<br><strong>Texto na tela:</strong> A beleza vem de dentro.</p><p><strong>Gravar takes</strong> (texto na tela: “Daqui de dentro”):</p><ul><li>Processo dos procedimentos de sobrancelhas e pestanas</li><li>Detalhes do cuidado do espaço</li><li>Resultados em vídeo</li><li>Reação das clientes</li></ul>',
+      body: '<h4>Orientações</h4><p><strong>Gancho:</strong> Nicole “chamando” com a mão, entrando no seu ambiente de trabalho<br><strong>Texto na tela:</strong> A beleza vem de dentro</p>' +
+        '<p><strong>Gravar takes:</strong><br><strong>Texto na tela:</strong> Daqui de dentro</p><ul>' +
+        '<li>processo dos procedimentos de sobrancelhas e pestanas;</li>' +
+        '<li>detalhes do cuidado do espaço</li>' +
+        '<li>resultados em vídeo</li>' +
+        '<li>reação das clientes</li></ul>',
+      subitems: [
+        { id: "s1", text: "Gancho: Nicole “chamando” com a mão, entrando no seu ambiente de trabalho" },
+        { id: "s2", text: "processo dos procedimentos de sobrancelhas e pestanas" },
+        { id: "s3", text: "detalhes do cuidado do espaço" },
+        { id: "s4", text: "resultados em vídeo" },
+        { id: "s5", text: "reação das clientes" }
+      ],
       ref: "https://www.instagram.com/reel/DWGx4hRDTKN/?stkn=MWF0bXYzOXQwZXZpNQ=="
     },
     {
@@ -211,12 +237,20 @@
       prazo: "16/10",
       title: "Vídeo — mitos sobre extensão de pestanas",
       body: '<h4>Orientações</h4>' +
-        '<p><strong>Gancho:</strong> Tudo o que você precisa saber antes de fazer extensão de pestanas.</p>' +
-        '<p><strong>Cena 2</strong> — Nicole para a câmera: Suas pestanas não precisam ficar artificiais. Existem efeitos mais discretos e outros mais marcados. A gente conversa sobre o que você gosta antes de escolher. → Mostrar dois resultados reais com efeitos diferentes.</p>' +
-        '<p><strong>Cena 3</strong> — A alergia é um risco, sim. Nenhuma profissional pode prometer risco zero. Se você já teve alguma reação, é importante me comunicar antes de marcar.</p>' +
-        '<p><strong>Cena 4</strong> — A ideia da extensão não é prejudicar as suas pestanas naturais. Mas uma aplicação inadequada pode afetar os fios. Por isso, eu avalio as suas pestanas, faço a aplicação com cuidado e explico como cuidar delas depois. → Mostrar avaliação e takes próximos da aplicação.</p>' +
-        '<p><strong>Cena 5</strong> — O tempo de durabilidade varia de pessoa para pessoa. E, se você quiser manter o efeito, os cuidados diários e a manutenção precisam fazer parte da sua rotina.</p>' +
-        '<p><strong>Fecho:</strong> Se você é de Braga, me chama no WhatsApp, vamos encontrar o efeito de pestanas que mais combina com você.</p>'
+        '<h4>Gancho</h4><p>Tudo o que você precisa saber antes de fazer extensão de pestanas</p>' +
+        '<h4>CENA 2. Nicole para a câmera</h4><p>Suas pestanas não precisam ficar artificiais. Existem efeitos mais discretos e outros mais marcados. A gente conversa sobre o que você gosta antes de escolher.</p><p>→ Mostrar dois resultados reais com efeitos diferentes.</p>' +
+        '<h4>CENA 3.</h4><p>A alergia é um risco, sim. Nenhuma profissional pode prometer risco zero. Se você já teve alguma reação, é importante me comunicar antes de marcar.</p>' +
+        '<h4>CENA 4.</h4><p>A ideia da extensão não é prejudicar as suas pestanas naturais. Mas uma aplicação inadequada pode afetar os fios. Por isso, eu avalio as suas pestanas, faço a aplicação com cuidado e explico como cuidar delas depois.</p><p>-> Mostrar avaliação e takes próximos da aplicação.</p>' +
+        '<h4>CENA 5.</h4><p>O tempo de durabilidade varia de pessoa para pessoa. E, se você quiser manter o efeito, os cuidados diários e a manutenção precisam fazer parte da sua rotina.</p>' +
+        '<h4>Fecho</h4><p>Se você é de Braga, me chama no WhatsApp, vamos encontrar o efeito de pestanas que mais combina com você.</p>',
+      subitems: [
+        { id: "s1", text: "Gancho" },
+        { id: "s2", text: "Cena 2 — Nicole para a câmera + dois resultados reais com efeitos diferentes" },
+        { id: "s3", text: "Cena 3 — alergia" },
+        { id: "s4", text: "Cena 4 — avaliação e takes próximos da aplicação" },
+        { id: "s5", text: "Cena 5 — durabilidade e manutenção" },
+        { id: "s6", text: "Fecho" }
+      ]
     },
     {
       id: "2026-10-23-video",
@@ -224,7 +258,7 @@
       kind: "video",
       prazo: "19/10",
       title: "Vídeo — bastidores do curso de pestanas/sobrancelhas",
-      body: '<h4>Orientações</h4><p><strong>Vídeo:</strong> Nicole fazendo um procedimento, vivendo, resultados.<br><strong>Texto na tela:</strong> “Um dia eu fiz um curso de pestanas e sobrancelhas e isso meio que paga minhas contas até hoje”.</p>',
+      body: '<h4>Orientações</h4><p><strong>Vídeo:</strong> Nicole fazendo um procedimento, vivendo, resultados</p><p><strong>Texto na tela:</strong><br>Um dia eu fiz um curso de pestanas e sobrancelhas e isso meio que paga minhas contas até hoje</p>',
       ref: "https://www.instagram.com/reel/DccQauVRLla/?stkn=MTM2cm1mZDVtMG5xdg=="
     },
     {
@@ -237,7 +271,7 @@
         '<h4>Slide 3</h4><p><strong>O incômodo:</strong> “Penteio as sobrancelhas, saio de casa e parece que os fios já estão todos fora do lugar.”</p><p><strong>A solução:</strong> BROW LAMINATION</p><p><strong>Imagem:</strong> resultado real em que a posição dos fios esteja visível.</p>' +
         '<h4>Slide 4</h4><p><strong>O incômodo:</strong> “Até tiro uns pelinhos em casa, mas nunca consigo deixar as sobrancelhas do jeito que gostaria.”</p><p><strong>A solução:</strong> DESIGN DE SOBRANCELHAS</p><p><strong>Imagem:</strong> antes e depois autorizado ou foto do resultado final.</p>' +
         '<h4>Slide 5</h4><p><strong>O incômodo:</strong> “Gosto das minhas pestanas naturais, mas queria vê-las mais curvadas e destacadas.”</p><p><strong>A solução:</strong> LASH LIFTING</p><p><strong>Imagem:</strong> close do resultado, de preferência com antes e depois autorizado.</p>' +
-        '<h4>Slide 6</h4><p><strong>O incômodo:</strong> “Queria acordar com as sobrancelhas mais definidas, sem precisar preenchê-las todos os dias.”</p><p><strong>A solução:</strong> MICROPIGMENTAÇÃO DE SOBRANCELHAS <em>(sem foto pedida para este slide)</em></p>' +
+        '<h4>Slide 6</h4><p><strong>O incômodo:</strong> “Queria acordar com as sobrancelhas mais definidas, sem precisar preenchê-las todos os dias.”</p><p><strong>A solução:</strong> MICROPIGMENTAÇÃO DE SOBRANCELHAS</p>' +
         '<h4>Slide 7</h4><p>O seu olhar não precisa ser igual ao de ninguém para ser bonito.</p><p>O cuidado certo começa por entender o que você gostaria de valorizar.</p><p>Me chama no WhatsApp e conta qual destes incômodos falou mais com você. Vamos conversar sobre a melhor opção para valorizar o seu olhar.</p>' +
         '<h4>Legenda (texto do post)</h4><p>Às vezes você sabe o que gostaria de mudar no seu olhar, mas não sabe qual procedimento escolher. E tudo bem! 🤎</p><p>Se você é de Braga, me chama no WhatsApp e conta o que procura. Vamos conversar sobre o cuidado que faz sentido para você. ✨</p>',
       subitems: [
@@ -253,7 +287,7 @@
       kind: "foto",
       prazo: "23/10",
       title: "Fotos antes / processo / resultado",
-      body: '<h4>Orientações</h4><p><strong>Dica:</strong> lembre-se de tirar a foto no ângulo mais parecido possível um do outro para ficar igual ao da referência.</p>',
+      body: '<h4>Orientações</h4><p><strong>Fotos necessárias</strong></p><ul><li>antes</li><li>processo</li><li>resultado</li></ul><p><strong>Dica:</strong> lembre-se de tirar a foto no ângulo mais parecido possível um do outro para ficar igual ao da referência.</p>',
       subitems: [
         { id: "s1", text: "Antes" },
         { id: "s2", text: "Processo" },
@@ -267,7 +301,7 @@
       kind: "video",
       prazo: "26/10",
       title: "Vídeo — transição antes e depois",
-      body: '<h4>Orientações</h4><p>Podemos seguir a ideia do vídeo de referência, ou escolher um outro vídeo de transição. A ideia é mostrar de forma rápida o antes e depois de uma modelo que fez pestanas e sobrancelhas.</p>',
+      body: '<h4>Orientações</h4><p>→ Podemos a ideia do vídeo de referência, ou escolher um outro vídeo de transição.</p><p>A ideia é mostrar de forma rápida o antes e depois de uma modelo que fez pestanas e sobrancelhas.</p>',
       ref: "https://www.instagram.com/reel/DavmIujRxkh/?stkn=NG9jZXRpamNkam41"
     },
     {
@@ -281,7 +315,7 @@
         '<h4>Slide 4</h4><p>Nas pestanas, tem quem ame um efeito delicado e quem prefira mais destaque. Quero entender o que você procura antes de escolhermos o resultado.</p><p><strong>Imagem:</strong> aplicação ou resultado de extensão de pestanas.</p>' +
         '<h4>Slide 5</h4><p>Esse momento é seu.</p><p>Se quiser conversar durante o atendimento, ouvir uma música ou se preferir fechar os olhos e relaxar um pouquinho, fica à vontade também.</p><p><strong>Imagem:</strong> detalhes do espaço ou da Nicole a atender.</p>' +
         '<h4>Slide 6</h4><p>O meu desejo é que você se olhe no espelho e ame o que vê!</p><p>Se você é de Braga, me chama pelo WhatsApp no link da bio.</p>' +
-        '<h4>Legenda (texto do post)</h4><p>Quero ser sua profissional preferida de sobrancelhas e pestanas.<br>Então...</p><p>Minha missão é valorizar o seu olhar e te deixar ainda mais linda!</p><p>Se você é de Braga, me chama no WhatsApp pelo link da bio. Vou adorar cuidar de você! ✨</p>',
+        '<h4>Legenda (texto do post)</h4><p>Minha missão é valorizar o seu olhar e te deixar ainda mais linda!</p><p>Se você é de Braga, me chama no WhatsApp pelo link da bio. Vou adorar cuidar de você! ✨</p>',
       subitems: [
         { id: "s1", text: "Foto — Nicole atendendo" },
         { id: "s2", text: "Foto — resultado real do processo / desenho do design" },
