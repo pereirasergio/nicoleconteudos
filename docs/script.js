@@ -1,19 +1,29 @@
 (function(){
   var STORAGE_KEY = 'nicole-entregas-v2';
 
-  // Each pending item can have "subitems" — individual video clips that must
-  // be recorded for that post. The item's own checkbox ("master") is derived:
-  // done when every subitem is checked. Clicking the master toggles all
-  // subitems on/off together. An item with no subitems (a single continuous
-  // video) uses one hidden synthetic subitem so the same logic covers it.
+  // Todos os itens do painel (nada foi de fato ENTREGUE pela Nicole ainda —
+  // "Aprovado" no painel da AprovaPost quer dizer que a agência aprovou o
+  // roteiro/legenda, não que o material já foi produzido). Por isso tudo
+  // mora numa lista só, "Para produzir", com checkbox.
+  //
+  // kind define a tag/cor do item:
+  //   "video" = Roteiro de Vídeo (Nicole grava vídeo)
+  //   "foto"  = Roteiro de Imagem OU Copy que pede fotos/prints da Nicole
+  //   "copy"  = legenda/carrossel pronto, sem material a produzir
+  //
+  // subitems são os checkboxes individuais (cenas, fotos, dias de stories...).
+  // Um item com um único entregável usa um subitem sintético "_single" —
+  // mesma lógica de "master = todos os subitems marcados" para todos os itens.
+  //
+  // prazo só aparece quando o painel mostra um "Prazo:" explícito.
   var ITEMS = [
     {
       id: "2026-10-05-roteiro",
       date: "Seg, 05 de out",
-      deadline: "03/10",
+      kind: "video",
+      prazo: "03/10",
       title: "Extensão de pestanas, sobrancelhas e brow lamination",
-      formato: "Nicole começa falando para a câmera. Depois entram takes dos procedimentos e dos resultados, com a fala dela em off.",
-      foco: "Extensão de pestanas, design de sobrancelhas e brow lamination.",
+      body: '<h4>Formato</h4><p>Nicole começa falando para a câmera. Depois entram takes dos procedimentos e dos resultados, com a fala dela em off.</p><h4>Foco</h4><p>Extensão de pestanas, design de sobrancelhas e brow lamination.</p>',
       subitems: [
         { id: "s1", text: "Cena 1 — gancho olhando pra câmera: “sente que falta alguma coisa no seu olhar?”" },
         { id: "s2", text: "Cena 2 — segue na câmera, contando a própria experiência" },
@@ -25,9 +35,10 @@
     {
       id: "2026-10-07-roteiro",
       date: "Qua, 07 de out",
-      deadline: "03/10",
+      kind: "video",
+      prazo: "03/10",
       title: "Dia real de atendimentos (bastidores)",
-      formato: "Sem falar pra câmera nem decorar roteiro — a narração é montada depois em cima das imagens. Vídeos na vertical, takes curtos, som não é prioridade.",
+      body: '<h4>Formato</h4><p>Sem falar pra câmera nem decorar roteiro — a narração é montada depois em cima das imagens. Vídeos na vertical, takes curtos, som não é prioridade.</p>',
       subitems: [
         { id: "s1", text: "Abertura: selfie rápida com tchauzinho OU só imagens trabalhando, sem falar nada" },
         { id: "s2", text: "Em cada atendimento: procedimento + resultado, variando ângulos (de cima, de lado, mais aberto)" },
@@ -35,52 +46,40 @@
         { id: "s4", text: "Bastidores entre clientes: higienizar a maca, organizar materiais, detalhes do estúdio, uma pausa" },
         { id: "s5", text: "Fechamento no fim do expediente: organizando o espaço, apagando as luzes ou um tchau pra câmera" }
       ],
-      ref: true
+      ref: "https://www.instagram.com/reel/DZvYAFxNtyo/?stkn=eHRkcjU4Nzg5NTN0"
     },
     {
       id: "2026-10-09-roteiro",
       date: "Sex, 09 de out",
-      deadline: "03/10",
+      kind: "video",
+      prazo: "03/10",
       title: "Vídeo em tópicos, estilo orgânico (selfie)",
-      formato: "Modo selfie, falando em tópicos — bem parecido com a referência. Vídeo único e contínuo (não precisa gravar em partes separadas).",
-      foco: "Tema: “coisas que eu não acho normal sendo especialista em pestanas e sobrancelhas”.",
-      pontos: [
-        "Achar que toda extensão de pestanas fica artificial",
-        "Achar que tirar uns pelinhos da sobrancelha em casa é igual a fazer num studio",
-        "Não estar satisfeita com o olhar e achar que não tem o que fazer",
-        "Ter medo de brow lamination por causa de uma sobrancelha arrepiada que viu na internet",
-        "Fazer as pestanas e esquecer da manutenção",
-        "Não se cuidar por “falta de tempo”"
-      ],
-      ref: true
-    }
-  ];
-
-  // Items with no explicit "subitems" get one synthetic entry, so the same
-  // done/toggle logic works uniformly for every item.
-  ITEMS.forEach(function(item){
-    if (!item.subitems) item.subitems = [{ id: "_single", text: null }];
-  });
-
-  // Itens já "Aprovado" pela agência. kind define a tag/cor:
-  //   "video" = Roteiro de Vídeo (Nicole grava vídeo)
-  //   "foto"  = Roteiro de Imagem OU Copy que pede fotos/prints da Nicole
-  //   "copy"  = legenda/carrossel pronto, sem material a produzir
-  // prazo só aparece quando o painel mostra um "Prazo:" explícito.
-  var APPROVED = [
+      body: '<h4>Formato</h4><p>Modo selfie, falando em tópicos — bem parecido com a referência. Vídeo único e contínuo (não precisa gravar em partes separadas).</p><h4>Foco</h4><p>Tema: “coisas que eu não acho normal sendo especialista em pestanas e sobrancelhas”.</p>' +
+        '<h4>Roteiro</h4><ul>' +
+        '<li>Achar que toda extensão de pestanas fica artificial</li>' +
+        '<li>Achar que tirar uns pelinhos da sobrancelha em casa é igual a fazer num studio</li>' +
+        '<li>Não estar satisfeita com o olhar e achar que não tem o que fazer</li>' +
+        '<li>Ter medo de brow lamination por causa de uma sobrancelha arrepiada que viu na internet</li>' +
+        '<li>Fazer as pestanas e esquecer da manutenção</li>' +
+        '<li>Não se cuidar por “falta de tempo”</li>' +
+        '</ul>',
+      ref: "https://www.instagram.com/reel/DcPP2u8P0VL/?stkn=dmM0eHVtdzFhaXZw"
+    },
     {
-      id: "2026-10-03-stories",
+      id: "2026-10-03-0000-stories",
       date: "Sáb, 03 de out",
       kind: "copy",
       title: "Stories Semana 1 (05 a 11 de out)",
-      body: '<h4>Sobre</h4><p>Roteiro de stories da semana — um tema por dia, para Nicole gravar e postar (sem prazo de entrega, é conteúdo do dia a dia).</p>' +
-        '<h4>Segunda | conexão</h4><p><strong>Foco:</strong> começar uma conversa com quem acompanha.<br><strong>Sequência sugerida:</strong> Nicole aparece, mostra um pedacinho da rotina e pergunta: “O que você mais gosta no seu olhar: pestanas ou sobrancelhas?” Pode usar enquete para puxar as respostas.</p>' +
-        '<h4>Terça | educação</h4><p><strong>Foco:</strong> ajudar a cliente a entender os serviços.<br><strong>Sequência sugerida:</strong> Escolher uma dúvida por vez. Ex.: “Extensão de pestanas precisa ficar marcada?” Mostrar dois resultados diferentes e explicar, em poucas palavras, como a escolha do efeito muda o visual.</p>' +
-        '<h4>Quarta | carreira e autoridade</h4><p><strong>Foco:</strong> mostrar a profissional por trás dos atendimentos.<br><strong>Sequência sugerida:</strong> Contar uma história curta da trajetória em Portugal, mostrar algo que aprendeu na profissão ou explicar uma escolha técnica que faz no atendimento. Cabe falar também com futuras alunas, sem anunciar cursos antes da hora.</p>' +
-        '<h4>Quinta | quebra de objeção</h4><p><strong>Foco:</strong> dar segurança para quem quer marcar.<br><strong>Sequência sugerida:</strong> Pegar um receio real: medo de ficar artificial, dúvidas sobre manutenção ou sobre como escolher o procedimento. Nicole responde olhando para a câmera e mostra um exemplo do próprio trabalho.</p>' +
-        '<h4>Sexta | dia de atendimentos</h4><p><strong>Foco:</strong> mostrar a experiência acontecendo.<br><strong>Sequência sugerida:</strong> Chegada ao estúdio, preparação, trechos de um procedimento, resultado final e, quando houver autorização, reação ou comentário da cliente. Vale gravar ao longo do dia e publicar só os melhores momentos.</p>' +
-        '<h4>Sábado | resultados e convite</h4><p><strong>Foco:</strong> transformar interesse em marcação.<br><strong>Sequência sugerida:</strong> Mostrar um resultado de pestanas ou sobrancelhas, contar brevemente o que a cliente procurava e fechar com: “Quer encontrar um resultado que combine com você? Me chama no WhatsApp.”</p>' +
-        '<h4>Domingo | proximidade e agenda</h4><p><strong>Foco:</strong> manter a presença de forma leve.<br><strong>Sequência sugerida:</strong> Um momento da vida real, uma reflexão curta sobre a semana ou os preparativos para a próxima. Se fizer sentido, terminar com os horários disponíveis. Se for dia de descanso, bastam um ou dois stories.</p>'
+      body: '<h4>Sobre</h4><p>Roteiro de stories da semana — um tema por dia (sem prazo de entrega, é conteúdo do dia a dia). O detalhe de cada dia está nos checkboxes abaixo.</p>',
+      subitems: [
+        { id: "s1", text: "Segunda | conexão — Foco: começar uma conversa com quem acompanha. Sequência: Nicole aparece, mostra um pedacinho da rotina e pergunta “O que você mais gosta no seu olhar: pestanas ou sobrancelhas?” (pode usar enquete)." },
+        { id: "s2", text: "Terça | educação — Foco: ajudar a cliente a entender os serviços. Sequência: escolher uma dúvida por vez (ex.: “Extensão de pestanas precisa ficar marcada?”), mostrar dois resultados diferentes." },
+        { id: "s3", text: "Quarta | carreira e autoridade — Foco: mostrar a profissional por trás dos atendimentos. Sequência: contar uma história curta da trajetória em Portugal ou uma escolha técnica do atendimento." },
+        { id: "s4", text: "Quinta | quebra de objeção — Foco: dar segurança para quem quer marcar. Sequência: pegar um receio real (medo de ficar artificial, manutenção etc.) e responder com um exemplo do próprio trabalho." },
+        { id: "s5", text: "Sexta | dia de atendimentos — Foco: mostrar a experiência acontecendo. Sequência: chegada ao estúdio, preparação, trechos de um procedimento, resultado final, reação da cliente (se autorizado)." },
+        { id: "s6", text: "Sábado | resultados e convite — Foco: transformar interesse em marcação. Sequência: mostrar um resultado, contar o que a cliente procurava e fechar com CTA para o WhatsApp." },
+        { id: "s7", text: "Domingo | proximidade e agenda — Foco: manter a presença de forma leve. Sequência: um momento da vida real, reflexão da semana ou horários disponíveis (1 ou 2 stories bastam)." }
+      ]
     },
     {
       id: "2026-10-03-1800-copy",
@@ -113,7 +112,12 @@
       kind: "foto",
       prazo: "07/10",
       title: "Fotos do studio, do resultado e da artista",
-      body: '<h4>Orientações</h4><ul><li>O lugar: foto de um ambiente do studio</li><li>A arte: foto de um resultado</li><li>A artista: uma foto sua</li></ul>',
+      body: '<h4>Orientações</h4><p>Três fotos, marcadas separadamente abaixo.</p>',
+      subitems: [
+        { id: "s1", text: "O lugar — foto de um ambiente do studio" },
+        { id: "s2", text: "A arte — foto de um resultado" },
+        { id: "s3", text: "A artista — uma foto sua" }
+      ],
       ref: "https://aprovapost.com.br/uploads/roteiros/5394/6ab51ef4dd804_Captura%20de%20Tela%202026-09-24%20a%CC%80s%2010.00.00.png"
     },
     {
@@ -142,8 +146,11 @@
       date: "Seg, 19 de out",
       kind: "foto",
       title: "Carrossel de feedbacks das clientes",
-      body: '<h4>Legenda</h4><p>Feedbacks: Não sou eu quem estou dizendo, são elas →<br>Arrasta para o lado para conferir feedbacks de quem confia! ✨</p><p>Se você é de Braga e também quer cuidar das suas sobrancelhas ou pestanas, clica no link da bio e faça a tua marcação.</p>' +
-        '<h4>Fotos necessárias</h4><ul><li>Foto de procedimento de fundo</li><li>Print de feedbacks das clientes (envie pelo menos 5, por favor)</li></ul>'
+      body: '<h4>Legenda</h4><p>Feedbacks: Não sou eu quem estou dizendo, são elas →<br>Arrasta para o lado para conferir feedbacks de quem confia! ✨</p><p>Se você é de Braga e também quer cuidar das suas sobrancelhas ou pestanas, clica no link da bio e faça a tua marcação.</p>',
+      subitems: [
+        { id: "s1", text: "Foto de procedimento de fundo" },
+        { id: "s2", text: "Prints de feedbacks das clientes (pelo menos 5)" }
+      ]
     },
     {
       id: "2026-10-20-video",
@@ -166,7 +173,8 @@
         '<p><strong>Cena 3</strong> — A alergia é um risco, sim. Nenhuma profissional pode prometer risco zero. Se você já teve alguma reação, é importante me comunicar antes de marcar.</p>' +
         '<p><strong>Cena 4</strong> — A ideia da extensão não é prejudicar as suas pestanas naturais. Mas uma aplicação inadequada pode afetar os fios. Por isso, eu avalio as suas pestanas, faço a aplicação com cuidado e explico como cuidar delas depois. → Mostrar avaliação e takes próximos da aplicação.</p>' +
         '<p><strong>Cena 5</strong> — O tempo de durabilidade varia de pessoa para pessoa. E, se você quiser manter o efeito, os cuidados diários e a manutenção precisam fazer parte da sua rotina.</p>' +
-        '<p><strong>Fecho:</strong> Se você é de Braga, me chama no WhatsApp, vamos encontrar o efeito de pestanas que mais combina com você.</p>'
+        '<p><strong>Fecho:</strong> Se você é de Braga, me chama no WhatsApp, vamos encontrar o efeito de pestanas que mais combina com você.</p>',
+      ref: "https://aprovapost.com.br/13527/cliente/nicole-kentta/"
     },
     {
       id: "2026-10-23-video",
@@ -182,13 +190,13 @@
       date: "Seg, 26 de out",
       kind: "foto",
       title: "Carrossel — “O que te incomoda no seu olhar tem solução”",
-      body: '<h4>Legenda</h4><p>O que te incomoda no seu olhar tem solução<br>Descubra qual destes cuidados combina com o que você procura.</p><p>Às vezes você sabe o que gostaria de mudar no seu olhar, mas não sabe qual procedimento escolher. E tudo bem! 🤎</p><p>Se você é de Braga, me chama no WhatsApp e conta o que procura. Vamos conversar sobre o cuidado que faz sentido para você. ✨</p>' +
-        '<h4>Fotos necessárias (uma por slide)</h4><ul>' +
-        '<li>Extensão de pestanas — resultado real, mostrando bem o efeito escolhido pela cliente</li>' +
-        '<li>Brow lamination — resultado real em que a posição dos fios esteja visível</li>' +
-        '<li>Design de sobrancelhas — antes e depois autorizado, ou foto do resultado final</li>' +
-        '<li>Lash lifting — close do resultado, de preferência com antes e depois autorizado</li>' +
-        '</ul>'
+      body: '<h4>Legenda</h4><p>O que te incomoda no seu olhar tem solução<br>Descubra qual destes cuidados combina com o que você procura.</p><p>Às vezes você sabe o que gostaria de mudar no seu olhar, mas não sabe qual procedimento escolher. E tudo bem! 🤎</p><p>Se você é de Braga, me chama no WhatsApp e conta o que procura. Vamos conversar sobre o cuidado que faz sentido para você. ✨</p>',
+      subitems: [
+        { id: "s1", text: "Foto — extensão de pestanas: resultado real, mostrando bem o efeito escolhido pela cliente" },
+        { id: "s2", text: "Foto — brow lamination: resultado real em que a posição dos fios esteja visível" },
+        { id: "s3", text: "Foto — design de sobrancelhas: antes e depois autorizado, ou foto do resultado final" },
+        { id: "s4", text: "Foto — lash lifting: close do resultado, de preferência com antes e depois autorizado" }
+      ]
     },
     {
       id: "2026-10-27-fotos",
@@ -196,7 +204,12 @@
       kind: "foto",
       prazo: "23/10",
       title: "Fotos antes / processo / resultado",
-      body: '<h4>Fotos necessárias</h4><ul><li>Antes</li><li>Processo</li><li>Resultado</li></ul><p><strong>Dica:</strong> lembre-se de tirar a foto no ângulo mais parecido possível um do outro para ficar igual ao da referência.</p>',
+      body: '<h4>Orientações</h4><p><strong>Dica:</strong> lembre-se de tirar a foto no ângulo mais parecido possível um do outro para ficar igual ao da referência.</p>',
+      subitems: [
+        { id: "s1", text: "Antes" },
+        { id: "s2", text: "Processo" },
+        { id: "s3", text: "Resultado" }
+      ],
       ref: "https://aprovapost.com.br/uploads/roteiros/5401/6ab5236bce8bd_Captura%20de%20Tela%202026-09-24%20a%CC%80s%2010.18.33.png"
     },
     {
@@ -213,15 +226,30 @@
       date: "Sex, 30 de out",
       kind: "foto",
       title: "Carrossel — “Quero ser sua profissional preferida”",
-      body: '<h4>Legenda</h4><p>Quero ser sua profissional preferida de sobrancelhas e pestanas.<br>Então...</p><p>Minha missão é valorizar o seu olhar e te deixar ainda mais linda!</p><p>Se você é de Braga, me chama no WhatsApp pelo link da bio. Vou adorar cuidar de você! ✨</p>' +
-        '<h4>Fotos necessárias (uma por slide)</h4><ul>' +
-        '<li>Nicole atendendo</li>' +
-        '<li>Resultado real do processo / desenho do design</li>' +
-        '<li>Aplicação ou resultado de extensão de pestanas</li>' +
-        '<li>Detalhes do espaço ou da Nicole a atender</li>' +
-        '</ul>'
+      body: '<h4>Legenda</h4><p>Quero ser sua profissional preferida de sobrancelhas e pestanas.<br>Então...</p><p>Minha missão é valorizar o seu olhar e te deixar ainda mais linda!</p><p>Se você é de Braga, me chama no WhatsApp pelo link da bio. Vou adorar cuidar de você! ✨</p>',
+      subitems: [
+        { id: "s1", text: "Foto — Nicole atendendo" },
+        { id: "s2", text: "Foto — resultado real do processo / desenho do design" },
+        { id: "s3", text: "Foto — aplicação ou resultado de extensão de pestanas" },
+        { id: "s4", text: "Foto — detalhes do espaço ou da Nicole a atender" }
+      ]
     }
   ];
+
+  // Ordena por data (todas em 2026-10) para a lista ficar em ordem cronológica.
+  ITEMS.sort(function(a, b){ return a.id < b.id ? -1 : a.id > b.id ? 1 : 0; });
+
+  // Itens sem "subitems" explícitos ganham um subitem sintético único, para a
+  // mesma lógica de done/toggle funcionar em todo item (checkbox único).
+  ITEMS.forEach(function(item){
+    if (!item.subitems) item.subitems = [{ id: "_single", text: null }];
+  });
+
+  var TAG_LABEL = { video: 'Vídeo', foto: 'Fotos', copy: 'Copy' };
+  var TAG_CLASS = { video: '', foto: 'foto', copy: 'copy' };
+  var UNIT_LABEL = { video: 'vídeos gravados', foto: 'fotos enviadas', copy: 'itens prontos' };
+  var DONE_LABEL = { video: 'Material entregue', foto: 'Material entregue', copy: 'Publicado' };
+  var WAIT_LABEL = { video: 'Aguardando gravação', foto: 'Aguardando envio', copy: 'Aguardando publicação' };
 
   function loadState(){
     try {
@@ -282,13 +310,12 @@
   }
 
   function renderDetails(item){
-    var html = '';
-    if (item.formato) html += '<h4>Formato</h4><p>' + esc(item.formato) + '</p>';
-    if (item.foco) html += '<h4>Foco</h4><p>' + esc(item.foco) + '</p>';
+    var html = item.body || '';
 
     var hasVisibleSubitems = item.subitems.length && item.subitems[0].id !== '_single';
     if (hasVisibleSubitems){
-      html += '<h4>Vídeos a gravar</h4><div class="sublist" data-item="' + esc(item.id) + '">';
+      var heading = item.kind === 'video' ? 'Vídeos a gravar' : (item.kind === 'foto' ? 'Fotos a enviar' : 'Itens');
+      html += '<h4>' + heading + '</h4><div class="sublist" data-item="' + esc(item.id) + '">';
       item.subitems.forEach(function(s){
         var done = isSubChecked(item.id, s.id);
         html += '<div class="subitem" data-sub="' + esc(s.id) + '" data-done="' + done + '" role="button" tabindex="0">' +
@@ -297,14 +324,10 @@
         '</div>';
       });
       html += '</div>';
-    } else if (item.pontos && item.pontos.length){
-      html += '<h4>Roteiro</h4><ul>';
-      item.pontos.forEach(function(p){ html += '<li>' + esc(p) + '</li>'; });
-      html += '</ul>';
     }
 
     if (item.ref){
-      html += '<a class="ref-link" href="https://aprovapost.com.br/13527/cliente/nicole-kentta/" target="_blank" rel="noopener">Ver referência no painel →</a>';
+      html += '<a class="ref-link" href="' + esc(item.ref) + '" target="_blank" rel="noopener">Ver referência →</a>';
     }
     return html;
   }
@@ -321,17 +344,19 @@
 
       var statusText;
       if (done) {
-        statusText = 'Material entregue';
+        statusText = DONE_LABEL[item.kind];
       } else if (hasVisibleSubitems) {
-        statusText = checkedCount + '/' + totalCount + ' vídeos gravados';
+        statusText = checkedCount + '/' + totalCount + ' ' + UNIT_LABEL[item.kind];
       } else {
-        statusText = 'Aguardando gravação';
+        statusText = WAIT_LABEL[item.kind];
       }
 
       var card = document.createElement('div');
       card.className = 'card pending';
       card.dataset.done = done ? 'true' : 'false';
       card.dataset.open = open ? 'true' : 'false';
+
+      var dateLine = esc(item.date) + (item.hora ? ' · ' + esc(item.hora) : '');
 
       var row = document.createElement('div');
       row.className = 'card-row';
@@ -341,11 +366,11 @@
         '<div class="check" data-role="check">' + checkSvg() + '</div>' +
         '<div class="card-main">' +
           '<div class="card-top">' +
-            '<span class="deadline-badge">Prazo: ' + esc(item.deadline) + '</span>' +
-            '<span class="tag">Vídeo</span>' +
+            (item.prazo ? '<span class="deadline-badge">Prazo: ' + esc(item.prazo) + '</span>' : '') +
+            '<span class="tag ' + TAG_CLASS[item.kind] + '">' + TAG_LABEL[item.kind] + '</span>' +
           '</div>' +
           '<div class="title">' + esc(item.title) + '</div>' +
-          '<div class="launch-date">Vai ao ar: ' + esc(item.date) + '</div>' +
+          '<div class="launch-date">Vai ao ar: ' + dateLine + '</div>' +
           '<div class="status-line' + (done ? ' done' : '') + '">' + statusText + '</div>' +
         '</div>' +
         '<div class="chevron">▾</div>';
@@ -385,63 +410,6 @@
     });
   }
 
-  var TAG_LABEL = { video: 'Vídeo', foto: 'Fotos', copy: 'Copy' };
-  var TAG_CLASS = { video: '', foto: 'foto', copy: 'copy' };
-
-  function renderApprovedDetails(item){
-    var html = item.body || '';
-    if (item.ref){
-      html += '<a class="ref-link" href="' + esc(item.ref) + '" target="_blank" rel="noopener">Ver referência →</a>';
-    }
-    return html;
-  }
-
-  function renderApproved(){
-    var list = document.getElementById('approved-list');
-    list.innerHTML = '';
-    APPROVED.forEach(function(item){
-      var open = !!openIds[item.id];
-
-      var card = document.createElement('div');
-      card.className = 'card';
-      card.dataset.open = open ? 'true' : 'false';
-
-      var row = document.createElement('div');
-      row.className = 'card-row';
-      row.tabIndex = 0;
-      row.setAttribute('role', 'button');
-
-      var dateLine = esc(item.date) + (item.hora ? ' · ' + esc(item.hora) : '');
-      var topHtml = '<div class="card-top">';
-      if (item.prazo) topHtml += '<span class="deadline-badge">Prazo: ' + esc(item.prazo) + '</span>';
-      topHtml += '<span class="tag ' + TAG_CLASS[item.kind] + '">' + TAG_LABEL[item.kind] + '</span>';
-      topHtml += '</div>';
-
-      row.innerHTML =
-        '<div class="check-mini" data-role="status">' + checkSvg() + '</div>' +
-        '<div class="card-main">' +
-          topHtml +
-          '<div class="title">' + esc(item.title) + '</div>' +
-          '<div class="launch-date">Vai ao ar: ' + dateLine + '</div>' +
-          '<div class="status-line done">Aprovado pela agência</div>' +
-        '</div>' +
-        '<div class="chevron">▾</div>';
-
-      row.addEventListener('click', function(){
-        openIds[item.id] = !openIds[item.id];
-        renderApproved();
-      });
-
-      var details = document.createElement('div');
-      details.className = 'details';
-      details.innerHTML = renderApprovedDetails(item);
-
-      card.appendChild(row);
-      card.appendChild(details);
-      list.appendChild(card);
-    });
-  }
-
   function updatePendingCount(){
     var remaining = ITEMS.filter(function(item){ return !isItemDone(item); }).length;
     document.getElementById('pending-count').textContent = remaining;
@@ -449,7 +417,6 @@
 
   function renderAll(){
     renderPending();
-    renderApproved();
     updatePendingCount();
   }
 
