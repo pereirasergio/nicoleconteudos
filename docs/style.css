@@ -126,20 +126,43 @@ section{ margin-top:32px; }
 .check svg path{ stroke:white; }
 
 .card-main{ flex:1 1 auto; min-width:0; }
-.card-top{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:4px; }
+.card-top{ display:flex; flex-wrap:wrap; align-items:center; gap:8px; margin-bottom:6px; }
 .date{ font-weight:600; font-size:14.5px; }
 .tag{
   font-size:10.5px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
   padding:2px 7px; border-radius:6px; background:var(--accent-soft); color:var(--accent);
 }
 .tag.copy{ background:var(--surface-2); color:var(--muted); }
-.deadline{
-  font-size:11.5px; color:var(--muted); margin-left:auto; white-space:nowrap;
+.deadline-badge{
+  font-size:12px; font-weight:700; letter-spacing:.01em;
+  padding:4px 10px; border-radius:99px; background:var(--accent); color:var(--accent-ink);
+  white-space:nowrap;
 }
-.title{ font-size:14.5px; line-height:1.4; color:var(--ink); }
+.launch-date{
+  font-size:12px; color:var(--muted); margin-top:3px;
+}
+.title{ font-size:14.5px; line-height:1.4; color:var(--ink); margin-top:2px; }
 .title.muted{ color:var(--muted); }
 .status-line{ font-size:12.5px; color:var(--muted); margin-top:3px; }
 .status-line.done{ color:var(--success); font-weight:600; }
+
+.sublist{ display:flex; flex-direction:column; gap:8px; margin:4px 0 8px; }
+.subitem{
+  display:flex; align-items:flex-start; gap:9px; cursor:pointer;
+}
+.subitem:focus-visible{ outline:2px solid var(--accent); outline-offset:2px; border-radius:6px; }
+.subcheck{
+  flex:0 0 auto; width:18px; height:18px; margin-top:1px;
+  border-radius:5px; border:2px solid var(--border); background:var(--surface);
+  display:flex; align-items:center; justify-content:center;
+  transition:background .15s ease, border-color .15s ease;
+}
+.subcheck svg{ width:11px; height:11px; opacity:0; transition:opacity .15s ease; }
+.subcheck svg path{ stroke:white; }
+.subitem[data-done="true"] .subcheck{ background:var(--success); border-color:var(--success); }
+.subitem[data-done="true"] .subcheck svg{ opacity:1; }
+.subitem-text{ font-size:13.5px; line-height:1.5; }
+.subitem[data-done="true"] .subitem-text{ color:var(--muted); text-decoration:line-through; text-decoration-color:var(--border); }
 
 .chevron{ flex:0 0 auto; color:var(--muted); margin-top:4px; transition:transform .15s ease; }
 .card[data-open="true"] .chevron{ transform:rotate(180deg); }
