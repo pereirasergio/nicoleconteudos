@@ -133,6 +133,7 @@ section{ margin-top:32px; }
   padding:2px 7px; border-radius:6px; background:var(--accent-soft); color:var(--accent);
 }
 .tag.copy{ background:var(--surface-2); color:var(--muted); }
+.tag.foto{ background:var(--success-soft); color:var(--success); }
 .deadline-badge{
   font-size:12px; font-weight:700; letter-spacing:.01em;
   padding:4px 10px; border-radius:99px; background:var(--accent); color:var(--accent-ink);
@@ -180,13 +181,9 @@ section{ margin-top:32px; }
 .details li{ margin-bottom:3px; }
 .ref-link{ display:inline-block; margin-top:4px; font-size:13px; }
 
-.copy-row{
-  display:flex; align-items:center; gap:12px; padding:12px 16px;
-}
-.copy-row .dot{ width:24px; text-align:center; color:var(--muted); font-size:14px; }
-
 .check-mini{
-  width:20px;height:20px;background:var(--success);border-color:var(--success);
+  flex:0 0 auto; width:24px; height:24px; margin-top:2px;
+  background:var(--success); border:2px solid var(--success);
   border-radius:7px; display:flex; align-items:center; justify-content:center;
 }
 .check-mini svg{ width:14px; height:14px; }
