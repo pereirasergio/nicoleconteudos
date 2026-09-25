@@ -59,21 +59,21 @@
   ];
 
   var APPROVED = [
-    {date:"Sáb, 03 de out", type:"COPY"},
-    {date:"Sáb, 03 de out · 18h00", type:"COPY"},
-    {date:"Qui, 08 de out · 14h00", type:"COPY"},
-    {date:"Seg, 12 de out", type:"ROTEIRO"},
-    {date:"Ter, 13 de out", type:"ROTEIRO"},
-    {date:"Qui, 15 de out", type:"COPY"},
-    {date:"Sex, 16 de out", type:"ROTEIRO"},
-    {date:"Seg, 19 de out", type:"COPY"},
-    {date:"Ter, 20 de out", type:"ROTEIRO"},
-    {date:"Qui, 22 de out", type:"ROTEIRO"},
-    {date:"Sex, 23 de out", type:"ROTEIRO"},
-    {date:"Seg, 26 de out", type:"COPY"},
-    {date:"Ter, 27 de out", type:"ROTEIRO"},
-    {date:"Qui, 29 de out", type:"ROTEIRO"},
-    {date:"Sex, 30 de out", type:"COPY"}
+    {date:"Sáb, 03 de out", type:"FOTOS"},
+    {date:"Sáb, 03 de out · 18h00", type:"FOTOS"},
+    {date:"Qui, 08 de out · 14h00", type:"FOTOS"},
+    {date:"Seg, 12 de out", type:"VIDEOS"},
+    {date:"Ter, 13 de out", type:"VIDEOS"},
+    {date:"Qui, 15 de out", type:"FOTOS"},
+    {date:"Sex, 16 de out", type:"VIDEOS"},
+    {date:"Seg, 19 de out", type:"FOTOS"},
+    {date:"Ter, 20 de out", type:"VIDEOS"},
+    {date:"Qui, 22 de out", type:"VIDEOS"},
+    {date:"Sex, 23 de out", type:"VIDEOS"},
+    {date:"Seg, 26 de out", type:"FOTOS"},
+    {date:"Ter, 27 de out", type:"VIDEOS"},
+    {date:"Qui, 29 de out", type:"VIDEOS"},
+    {date:"Sex, 30 de out", type:"FOTOS"}
   ];
 
   function loadDelivered(){
@@ -134,7 +134,7 @@
       row.innerHTML =
         '<div class="check" data-role="check">' + checkSvg() + '</div>' +
         '<div class="card-main">' +
-          '<div class="card-top"><span class="date">' + esc(item.date) + '</span><span class="tag">Roteiro</span><span class="deadline">' + esc(item.deadline) + '</span></div>' +
+          '<div class="card-top"><span class="date">' + esc(item.date) + '</span><span class="tag">Vídeo</span><span class="deadline">' + esc(item.deadline) + '</span></div>' +
           '<div class="title">' + esc(item.title) + '</div>' +
           '<div class="status-line' + (done ? ' done' : '') + '">' + (done ? 'Material entregue' : 'Aguardando gravação') + '</div>' +
         '</div>' +
@@ -168,31 +168,28 @@
     APPROVED.forEach(function(a){
       var row = document.createElement('div');
       row.className = 'card';
-      var isCopy = a.type === 'COPY';
+      var isFoto = a.type === 'FOTOS';
       row.innerHTML =
         '<div class="copy-row">' +
-          '<div class="dot">' + (isCopy ? '·' : '<span class="check-mini">' + checkSvg() + '</span>') + '</div>' +
+          '<div class="dot">' + (isFoto ? '·' : '<span class="check-mini">' + checkSvg() + '</span>') + '</div>' +
           '<div class="card-main">' +
-            '<div class="card-top"><span class="date">' + esc(a.date) + '</span><span class="tag ' + (isCopy ? 'copy' : '') + '">' + a.type + '</span></div>' +
-            '<div class="title muted">' + (isCopy ? 'Copy definida pela agência' : 'Aprovado pela agência') + '</div>' +
+            '<div class="card-top"><span class="date">' + esc(a.date) + '</span><span class="tag ' + (isFoto ? 'copy' : '') + '">' + a.type + '</span></div>' +
+            '<div class="title muted">' + (isFoto ? 'Fotos definidas pela agência' : 'Vídeo aprovado pela agência') + '</div>' +
           '</div>' +
         '</div>';
       list.appendChild(row);
     });
   }
 
-  function updateProgress(){
-    var total = ITEMS.length;
-    var done = delivered.length;
-    document.getElementById('progress-num').textContent = done + '/' + total;
-    document.getElementById('pending-count').textContent = (total - done);
-    document.getElementById('progress-bar').style.width = (total ? (done / total * 100) : 0) + '%';
+  function updatePendingCount(){
+    var remaining = ITEMS.length - delivered.length;
+    document.getElementById('pending-count').textContent = remaining;
   }
 
   function renderAll(){
     renderPending();
     renderApproved();
-    updateProgress();
+    updatePendingCount();
   }
 
   function toggleDelivered(id){
